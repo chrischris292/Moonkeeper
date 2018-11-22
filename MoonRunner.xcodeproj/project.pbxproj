@@ -18,6 +18,7 @@
 		18CF26ED1E80290C0097F88C /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26EC1E80290C0097F88C /* HomeViewController.swift */; };
 		18CF26EF1E80291E0097F88C /* NewRunViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26EE1E80291E0097F88C /* NewRunViewController.swift */; };
 		18CF26F11E80292C0097F88C /* RunDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CF26F01E80292C0097F88C /* RunDetailsViewController.swift */; };
+		D911BB46AB13B983FA5AFFB1 /* Pods_MoonRunner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A063A3FC294AAF24DEDD6242 /* Pods_MoonRunner.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,9 @@
 		18CF26EC1E80290C0097F88C /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		18CF26EE1E80291E0097F88C /* NewRunViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewRunViewController.swift; sourceTree = "<group>"; };
 		18CF26F01E80292C0097F88C /* RunDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RunDetailsViewController.swift; sourceTree = "<group>"; };
+		718881BE69AD0327D469289A /* Pods-MoonRunner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MoonRunner/Pods-MoonRunner.debug.xcconfig"; sourceTree = "<group>"; };
+		A063A3FC294AAF24DEDD6242 /* Pods_MoonRunner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MoonRunner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF6D6088F8066B59F5042F2E /* Pods-MoonRunner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MoonRunner.release.xcconfig"; path = "Pods/Target Support Files/Pods-MoonRunner/Pods-MoonRunner.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D911BB46AB13B983FA5AFFB1 /* Pods_MoonRunner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +57,8 @@
 			children = (
 				18888DC11E7F0FA80038A3AF /* MoonRunner */,
 				18888DC01E7F0FA80038A3AF /* Products */,
+				7E74E916899D505276F8ACFA /* Pods */,
+				FB176BD4C46F5AD4CDE65557 /* Frameworks */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -116,6 +123,23 @@
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
+		7E74E916899D505276F8ACFA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				718881BE69AD0327D469289A /* Pods-MoonRunner.debug.xcconfig */,
+				DF6D6088F8066B59F5042F2E /* Pods-MoonRunner.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB176BD4C46F5AD4CDE65557 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A063A3FC294AAF24DEDD6242 /* Pods_MoonRunner.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,9 +147,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 18888DD41E7F0FA80038A3AF /* Build configuration list for PBXNativeTarget "MoonRunner" */;
 			buildPhases = (
+				A1B5BABBC4DC5FF804544FB7 /* [CP] Check Pods Manifest.lock */,
 				18888DBB1E7F0FA80038A3AF /* Sources */,
 				18888DBC1E7F0FA80038A3AF /* Frameworks */,
 				18888DBD1E7F0FA80038A3AF /* Resources */,
+				BDDC47A42731203FEEFB6EEB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -184,6 +210,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A1B5BABBC4DC5FF804544FB7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MoonRunner-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDDC47A42731203FEEFB6EEB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-MoonRunner/Pods-MoonRunner-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RAMPaperSwitch/RAMPaperSwitch.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RAMPaperSwitch.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MoonRunner/Pods-MoonRunner-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		18888DBB1E7F0FA80038A3AF /* Sources */ = {
@@ -327,6 +400,7 @@
 		};
 		18888DD51E7F0FA80038A3AF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 718881BE69AD0327D469289A /* Pods-MoonRunner.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -341,6 +415,7 @@
 		};
 		18888DD61E7F0FA80038A3AF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF6D6088F8066B59F5042F2E /* Pods-MoonRunner.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";

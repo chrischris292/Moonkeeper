@@ -1,0 +1,16 @@
+PODS:
+  - RAMPaperSwitch (3.0.0)
+
+DEPENDENCIES:
+  - RAMPaperSwitch
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - RAMPaperSwitch
+
+SPEC CHECKSUMS:
+  RAMPaperSwitch: 9b81604ec2e7d6dda3fd2cbac53eb012f7a5cc87
+
+PODFILE CHECKSUM: 4e0405d8c7fe77f6cda84b7d4fea2a9630b12ada
+
+COCOAPODS: 1.5.3
